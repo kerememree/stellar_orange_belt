@@ -122,7 +122,7 @@ The suite covers:
 
 ## Deployment Details
 
-Live demo link: TODO
+Live demo link: [TODO](https://stellar-orange-belt-3688.vercel.app/)
 
 Deployed contract address: `CAESJO4OW7Y57JR2Z4RHP4CXVYTKCYTDNEZ465DNXZW4UUASNQLWJXZZ`
 
@@ -162,24 +162,6 @@ Suggested verification after deploy:
 ## Demo Video
 
 Demo video link: TODO
-
-Suggested one-minute flow:
-
-1. show wallet options
-2. connect a wallet
-3. cast a vote
-4. show pending and success states
-5. show updated event feed
-6. show passing tests in terminal
-
-Suggested recording checklist:
-
-- keep the browser zoom at a readable level
-- start from the wallet options section
-- show one complete connect and vote cycle
-- pause briefly on the transaction hash
-- pause briefly on the event feed
-- end on the test output screenshot or terminal test run
 
 ## Screenshots
 
