@@ -122,7 +122,7 @@ The suite covers:
 
 ## Deployment Details
 
-Live demo link: [TODO](https://stellar-orange-belt-3688.vercel.app/)
+Live demo link: [Live demo link](https://stellar-orange-belt-3688.vercel.app/)
 
 Deployed contract address: `CAESJO4OW7Y57JR2Z4RHP4CXVYTKCYTDNEZ465DNXZW4UUASNQLWJXZZ`
 
