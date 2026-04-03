@@ -158,7 +158,7 @@ export async function submitVote(options: {
   );
 
   if (sendResponse.status === "ERROR") {
-    throw new Error(sendResponse.errorResultXdr || "Contract transaction failed.");
+    throw new Error(sendResponse.errorResult || "Contract transaction failed.");
   }
 
   const hash = sendResponse.hash;
