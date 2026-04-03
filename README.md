@@ -161,7 +161,7 @@ Suggested verification after deploy:
 
 ## Demo Video
 
-Demo video link: TODO
+Demo video link: [Video Link](https://youtu.be/KkoIk_Uuh8g)
 
 ## Screenshots
 
@@ -187,21 +187,6 @@ Save final assets under `public/screenshots/`:
 ### Test Output Showing 3+ Passing Tests
 
 ![Test output](./public/screenshots/test-output.png)
-
-## Submission Checklist
-
-- Public GitHub repository
-- README with complete documentation
-- Minimum 3+ meaningful commits
-- Live demo link
-- Demo video link
-- Screenshot showing 3+ tests passing
-
-## Suggested Orange Belt Commit Plan
-
-1. `promote yellow belt dapp into orange belt workspace`
-2. `add cache hydration and stronger loading states`
-3. `add orange belt test coverage and complete documentation`
 
 ## Useful Links
 
