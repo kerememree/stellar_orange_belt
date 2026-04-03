@@ -88,6 +88,22 @@ function normalizeEventPayload(value: unknown) {
   return {};
 }
 
+function formatSendTransactionError(errorResult: unknown) {
+  if (typeof errorResult === "string" && errorResult) {
+    return errorResult;
+  }
+
+  if (typeof errorResult === "object" && errorResult) {
+    try {
+      return JSON.stringify(errorResult);
+    } catch {
+      return "Contract transaction failed.";
+    }
+  }
+
+  return "Contract transaction failed.";
+}
+
 export async function fetchWalletBalance(address: string) {
   const account = await horizonServer.loadAccount(address);
   const nativeBalance = account.balances.find(
@@ -158,7 +174,7 @@ export async function submitVote(options: {
   );
 
   if (sendResponse.status === "ERROR") {
-    throw new Error(sendResponse.errorResult || "Contract transaction failed.");
+    throw new Error(formatSendTransactionError(sendResponse.errorResult));
   }
 
   const hash = sendResponse.hash;
