@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09111f;
+  --foreground: #f5f7fb;
+  --surface: rgba(12, 20, 36, 0.82);
+  --surface-strong: rgba(17, 27, 48, 0.96);
+  --surface-soft: rgba(142, 194, 255, 0.08);
+  --border: rgba(156, 197, 255, 0.18);
+  --muted: #9fb2d1;
+  --accent: #0ea5e9;
+  --accent-strong: #0284c7;
+  --accent-soft: rgba(14, 165, 233, 0.16);
+  --success: #4ade80;
+  --success-soft: rgba(74, 222, 128, 0.14);
+  --warning: #f59e0b;
+  --warning-soft: rgba(245, 158, 11, 0.15);
+  --danger: #fb7185;
+  --danger-soft: rgba(251, 113, 133, 0.14);
+  --shadow: 0 28px 90px rgba(2, 8, 23, 0.45);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-plex-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.32), transparent 22%),
+    radial-gradient(circle at 80% 12%, rgba(59, 130, 246, 0.28), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.14), transparent 26%),
+    linear-gradient(135deg, #050814 0%, #09111f 38%, #101a2d 100%);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), transparent 90%);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(14, 165, 233, 0.28);
+}
+
+.shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.shell-soft {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.signal-ring {
+  position: relative;
+}
+
+.signal-ring::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.field {
+  border: 1px solid rgba(156, 197, 255, 0.18);
+  background: rgba(8, 15, 28, 0.68);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.field:focus-within {
+  border-color: rgba(14, 165, 233, 0.62);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
+  transform: translateY(-1px);
+}
