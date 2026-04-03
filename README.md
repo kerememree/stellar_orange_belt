@@ -134,6 +134,31 @@ Contract call transaction hash: `5e79446a6915015286c7aceab6a194b2805922f5055db2d
 Transaction explorer:
 [Open transaction on Stellar Expert](https://stellar.expert/explorer/testnet/tx/5e79446a6915015286c7aceab6a194b2805922f5055db2d215a7b8f1b4d9727e)
 
+## Deploy To Vercel
+
+The easiest Orange Belt deployment path is `Vercel`.
+
+Recommended steps:
+
+1. Push this folder to a public GitHub repository.
+2. Import the repository into Vercel.
+3. If the repository contains multiple folders, set the project root to `orange_belt`.
+4. Add these environment variables in the Vercel project settings:
+   - `NEXT_PUBLIC_STELLAR_RPC_URL`
+   - `NEXT_PUBLIC_HORIZON_URL`
+   - `NEXT_PUBLIC_NETWORK_PASSPHRASE`
+   - `NEXT_PUBLIC_CONTRACT_ID`
+5. Redeploy after saving the environment variables.
+6. Copy the generated `https://...vercel.app` link into the `Live demo link` field above.
+
+Suggested verification after deploy:
+
+- connect Freighter on testnet
+- cast one vote
+- confirm transaction status becomes `success`
+- confirm the event feed updates
+- refresh the page and confirm cached data appears before the next live sync
+
 ## Demo Video
 
 Demo video link: TODO
@@ -146,6 +171,15 @@ Suggested one-minute flow:
 4. show pending and success states
 5. show updated event feed
 6. show passing tests in terminal
+
+Suggested recording checklist:
+
+- keep the browser zoom at a readable level
+- start from the wallet options section
+- show one complete connect and vote cycle
+- pause briefly on the transaction hash
+- pause briefly on the event feed
+- end on the test output screenshot or terminal test run
 
 ## Screenshots
 
